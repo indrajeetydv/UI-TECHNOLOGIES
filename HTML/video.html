@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <style>
+        html, body{
+			display: grid;
+			height: 100%;
+			width: 100%;
+			place-items: center;
+			background: -webkit-linear-gradient(left,#fd79a8,#0984e3);
+		}
+        .container{
+            text-align: center;
+        }
+    </style>
+		
+</head>
+<body>
+
+    <div class="container">
+        <button onclick="pausePlay()">Pause/Play</button>
+        <button onclick="BIG()">Big</button>
+        <button onclick="MEDIUM()">Medium</button>
+        <button onclick="SMALL()">Small</button>
+        
+        <br><br>
+        <video id="myvideo" width="450" controlplay controls>
+            <source src="../video/Justin Bieber.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    
+    
+    <script>
+        var  testvideo=document.getElementById("myvideo");
+        function pausePlay(){
+            if(testvideo.paused)
+                testvideo.play();
+            else
+                testvideo.pause();
+        }
+
+        function BIG(){
+            testvideo.width=600;
+        }
+
+        function SMALL(){
+            testvideo.width=250;
+        }
+
+        function MEDIUM(){
+            testvideo.width=400;
+        }
+
+    </script> 
+</body>
+</html>
